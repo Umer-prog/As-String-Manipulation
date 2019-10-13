@@ -1,0 +1,20 @@
+        Dim Str As String
+        Dim Word As String
+        Dim MyChar As Char
+        Dim spacecount As Integer
+        Word = ""
+        MyChar = ""
+        spacecount = 0
+        Const space = " "
+        Console.Write("Enter your string: ")
+        Str = Console.ReadLine
+        For spacecount = 1 To Len(Str)
+            MyChar = Mid(Str, spacecount, 1)
+                Word = Word & MyChar
+            If MyChar = space Then
+                Console.WriteLine(Word)
+                Word = ""
+            End If
+        Next
+        Console.WriteLine(Word)
+        Console.ReadKey()
