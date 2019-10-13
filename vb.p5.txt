@@ -1,0 +1,17 @@
+        Dim Str As String
+        Dim MyChar As Char
+        Dim InvStr As String
+        Dim Count As Integer
+        Dim InvChar As Char
+        InvChar = ""
+        MyChar = ""
+        InvStr = ""
+        Count = 0
+        Console.Write("Enter a word you want to inverse: ")
+        Str = Console.ReadLine
+        For Count = Len(Str) To 1 Step -1
+            InvChar = Mid(Str, Count, 1)
+            InvStr = InvStr & InvChar
+        Next
+        Console.WriteLine(InvStr)
+        Console.ReadKey() 
