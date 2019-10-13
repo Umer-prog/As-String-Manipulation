@@ -1,0 +1,19 @@
+        Dim str As String
+        Dim X As Integer
+        Dim Y As Integer
+        Dim Midword As String
+        Str = ""
+        X = 0
+        Y = 0
+        Midword = ""
+
+        Console.Write("ENTER THE STRING: ")
+        str = Console.ReadLine
+
+        X = InStr(str, " ")
+        Y = InStr(X + 1, str, " ")
+
+        Midword = Mid(Str, X + 1, Y - X - 1)
+
+        Console.WriteLine(" THE MIDDLE WORD OF STRING IS: " & Midword)
+        Console.ReadKey()
