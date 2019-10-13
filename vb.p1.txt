@@ -1,0 +1,24 @@
+
+        Dim Str1 As String
+        Dim Str2 As String
+        Dim X As Integer
+        Dim FN As String
+        Dim LN As String
+        Dim FinalName As String
+        Str1 = ""
+        Str2 = ""
+        X = 0
+        FN = ""
+        LN = ""
+        FinalName = ""
+        Console.Write("Enter the first String: ")
+        Str1 = Console.ReadLine
+        Console.Write("Enter the second String: ")
+        Str2 = Console.ReadLine
+        X = InStr(Str1, " ")
+        FN = Left(Str1, X - 1)
+        X = InStr(Str2, " ")
+        LN = Right(Str2, Len(Str2) - X)
+        FinalName = FN & " " & LN
+        Console.WriteLine(FinalName)
+        Console.ReadKey()
