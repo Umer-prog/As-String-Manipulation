@@ -1,0 +1,27 @@
+        Dim Str As String
+        Dim NewStr As String
+        Dim DeletedChar As String
+        Dim Char1 As String
+        Dim count As Integer
+        Dim charloop As Integer
+        Dim UnwantedChar As String
+        NewStr = ""
+        Char1 = ""
+        charloop = 0
+        UnwantedChar = ""
+        count = 0
+        Console.Write("Enter Your String: ")
+        Str = Console.ReadLine
+        Console.Write("Enter a character you want to delete: ")
+        DeletedChar = Console.ReadLine
+        For count = 1 To Len(Str)
+            Char1 = Mid(Str, count, 1)
+            For charloop = 1 To Len(Str)
+                UnwantedChar = Mid(DeletedChar, charloop, 1)
+            Next
+            If Char1 <> DeletedChar Then
+                NewStr = NewStr & Char1
+            End If
+        Next
+        Console.WriteLine(NewStr)
+        Console.ReadKey()
