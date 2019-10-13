@@ -1,0 +1,38 @@
+  Dim Str1 As String
+        Dim Str2 As String
+        Dim AscSum1 As Integer
+        Dim AscSum2 As Integer
+        Dim AscVal1 As Integer
+        Dim AscVal2 As Integer
+        Dim Count As Integer
+        Dim Chr1 As Char
+        Dim Chr2 As Char
+        Str1 = ""
+        Str2 = ""
+        AscSum1 = 0
+        AscSum2 = 0
+        AscVal1 = 0
+        AscVal2 = 0
+        Count = 0
+        Chr1 = ""
+        Chr2 = ""
+        Console.Write("Enter your first string: ")
+        Str1 = Console.ReadLine
+        Console.Write("Enter your second string: ")
+        Str2 = Console.ReadLine
+        For Count = 1 To Len(Str1)
+            Chr1 = Mid(Str1, Count, 1)
+            AscVal1 = Asc(Chr1)
+            AscSum1 = AscSum1 + AscVal1
+        Next
+        For Count = 1 To Len(Str2)
+            Chr2 = Mid(Str2, Count, 1)
+            AscVal2 = Asc(Chr2)
+            AscSum2 = AscSum2 + AscVal2
+        Next
+        If AscSum1 = AscSum2 Then
+            Console.WriteLine("This is an anagram")
+        Else
+            Console.WriteLine("This is not an anagram")
+        End If
+        Console.ReadKey()
