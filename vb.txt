@@ -1,0 +1,16 @@
+Dim binstr as string
+Dim binchar,count,value,sum,multiplier as integer
+binstr=""
+binchar=0
+count=0
+value=0
+sum=0
+multiplier=1
+            console.write("Enter your binary string: ")
+            binstr=console.readline
+            for count = len(binstr) to 1 step -1
+                binchar = mid(binstr,count,1)
+                value = binchar*multiplier
+                sum = sum+value
+                multiplier = multiplier*2
+            next
