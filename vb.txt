@@ -14,3 +14,5 @@ multiplier=1
                 sum = sum+value
                 multiplier = multiplier*2
             next
+            console.writeline(binstr & "=" & sum)
+            console.readkey
